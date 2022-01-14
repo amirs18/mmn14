@@ -12,7 +12,7 @@ package com.company;
 public class Ex14Test extends Ex14
 {
     public static void main(String args[]) {
-     /*   int[] arr = {1, 3, 5, 4, 8, 2, 4, 3, 6, 5};
+        int[] arr = {1, 3, 5, 4, 8, 2, 4, 3, 6, 5};
 
         int num, num2;
 
@@ -472,18 +472,11 @@ public class Ex14Test extends Ex14
             System.out.println("OK");
         else
             System.out.println("Error - your search: " + search(arr16x16, 257) + "Expect: false");
-    }}
-
-
-
-
-
-
 
 
         System.out.println("\n***** Qst 3 - equalSplit *****");
 
-        int[] arr = new int[]{-3, 5, 12, 14, -9, 13};
+         arr = new int[]{-3, 5, 12, 14, -9, 13};
         System.out.print("Test #1:......");
         if (equalSplit(arr))
             System.out.println("OK");
@@ -546,39 +539,33 @@ public class Ex14Test extends Ex14
         else
             System.out.println("Error - your equalSplit: " + equalSplit(arr) + "Expect: true");
 
-        arr = new int [] {-3, 5, 12, 14, -9, 13};
+        arr = new int[]{-3, 5, 12, 14, -9, 13};
         System.out.print("Test #10:.....");
         if (equalSplit(arr))
             System.out.println("OK");
         else
             System.out.println("Error - your equalSplit: " + equalSplit(arr) + "Expect: true");
 
-        arr = new int [] {1, 2, 3, 5, 8, -1, 2, 0};
+        arr = new int[]{1, 2, 3, 5, 8, -1, 2, 0};
         System.out.print("Test #11:.....");
         if (equalSplit(arr))
             System.out.println("OK");
         else
             System.out.println("Error - your equalSplit: " + equalSplit(arr) + "Expect: true");
 
-        arr = new int [] {-5, 7, 9, 5, 8, 4, -12, 0, -13, -7};
+        arr = new int[]{-5, 7, 9, 5, 8, 4, -12, 0, -13, -7};
         System.out.print("Test #12:.....");
         if (equalSplit(arr))
             System.out.println("OK");
         else
             System.out.println("Error - your equalSplit: " + equalSplit(arr) + "Expect: true");
 
-        arr = new int [] {1, 2, 3, 3, 2, 1};
+        arr = new int[]{1, 2, 3, 3, 2, 1};
         System.out.print("Test #13:.....");
         if (equalSplit(arr))
             System.out.println("OK");
         else
             System.out.println("Error - your equalSplit: " + equalSplit(arr) + "Expect: true");
-
-      */
-
-
-
-
 
 
         System.out.println("\n***** Qst 4 - isSpecial *****");
@@ -643,5 +630,7 @@ public class Ex14Test extends Ex14
             System.out.println("Error - your equalSplit: " + isSpecial(27) + "Expect: false");
 
 
-    }//End of Main
-}//End of Test
+    }}
+
+//End of Main
+       //End of Test
