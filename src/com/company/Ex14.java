@@ -45,15 +45,15 @@ public class Ex14 {
         int length = mat.length / 2, i = 0, j = 0;
         while (length >= 1) {
 
-            //biggest part of the array
+            //checking if num is in the biggest part of the array
             if ((mat[i + length][j] <= num))
                 i = i + length;
-            //second biggest part of the array
+            //checking if num is in the second biggest part of the array
             else if ((mat[i + length][j + length] <= num)) {
                 i = i + length;
                 j = j + length;
-                // third biggest part of the array and if num is smaller then this
-                // its in the smallest part of the array i,j don't change
+                // checking if num is in the third biggest part of the array and if num is smaller then this
+                // its in the smallest part of the array which means i,j don't change
             } else if ((mat[i][j + length] <= num))
                 j = j + length;
             if ((mat[i][j] == num)) {
