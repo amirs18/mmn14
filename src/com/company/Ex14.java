@@ -62,7 +62,7 @@ public class Ex14 {
                 System.out.println("col ="+j);
                 return true;
             }
-
+            //the jump between the indexes is always half the length of the relevant area
             length = length / 2;
         }
         return false;
@@ -90,9 +90,11 @@ public class Ex14 {
  */
 
     /**
-     *
-     * @param arr
-     * @return
+     * equalSplit is a function that checks if you can brake a given array into two groups
+     * with the same size and sums
+     * @param arr the given array
+     * @return true if you can brake a given array into two groups
+     *         with the same size and sums and false if not
      */
     public static boolean equalSplit(int[] arr) {
         if (arr.length % 2 != 0)
@@ -102,45 +104,54 @@ public class Ex14 {
     }
 
     /**
-     *
-     * @param arr
-     * @param i
-     * @param sum1
-     * @param sum2
-     * @param counter1
-     * @param counter2
-     * @return
+     * equalSplit is an overloaded recursive help function for equalSplit that brakes the array into
+     * all the possible groups
+     * @param arr the given araay
+     * @param i the relevant index of the array
+     * @param sum1 the current sum of group 1
+     * @param sum2 the current sum of group 2
+     * @param counter1 the number of numbers in group 1
+     * @param counter2 the number of numbers in group 2
+     * @return true if finds a way to brake the array into two groups
+     *         with the same size and sums and false if not
      */
     public static boolean equalSplit(int[] arr,int i,int sum1,int sum2,int counter1,int counter2) {
         if (i==arr.length)
             return sum1==sum2&&counter1==counter2;
+        // in every step we check what will happen if we add the number into every group
         return equalSplit(arr,i+1,sum1+arr[i],sum2,counter1+1,counter2)
                 ||equalSplit(arr,i+1,sum1,sum2+arr[i],counter1,counter2+1);
     }
 
     /**
-     *
-     * @param n
-     * @return
+     * isSpecial is function that checks if a given number is special
+     * according to the terms given in the question
+     * @param n the given number
+     * @return true if the number is special
      */
     public static boolean isSpecial (int n){
         return isSpecial(2,n);
     }
 
     /**
-     *
-     * @param delete
-     * @param place
-     * @return
+     * isSpecial is an overloaded recursive help function for isSpecial that
+     * eliminates the non special number
+     * @param jump the jumps between every non special number
+     * @param place the place of the given number after we start removing non special number
+     * @return true if the number is special
      */
-    public static boolean isSpecial (int delete,int place){
-        if (place%delete==0)
+    public static boolean isSpecial (int jump,int place){
+        if (place%jump==0)
             return false;
-        if (place<delete) {
+        // if the place of the number is smaller than the jump distance that means the number is special
+        if (place<jump) {
             System.out.println(place);
             return true;
         }
-        return isSpecial(delete+1,place-place/delete);
+        // after removing a round of non spacial numbers we need to move
+        // the place of our number accordingly and add one to the jump distance
+        // according to the terms of special number
+        return isSpecial(jump+1,place-place/jump);
     }
 
 }
